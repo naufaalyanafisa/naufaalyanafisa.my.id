@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Naufa</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fce4ec;
+        overflow-x: hidden;
+      }
+
+      nav {
+        width: 100%;
+        background-color: #f48fb1;
+        text-align: center;
+        padding: 20px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 30px;
+        margin: 0 10px;
+        font-size: 20px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      nav a:hover {
+        background-color: #ec407a;
+      }
+
+      .scrolling-message {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        white-space: nowrap;
+        font-size: 24px;
+        font-weight: bold;
+        animation: scrollMessage 10s linear infinite;
+        color: #d81b60;
+        width: 100%;
+      }
+
+      @keyframes scrollMessage {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .center-image {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin: 150px auto 30px auto;
+        background-image: url("foto kucing.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      section {
+        display: none;
+        padding: 100px 20px 50px 20px;
+        max-width: 800px;
+        margin: auto;
+        font-size: 20px;
+        color: #880e4f;
+        text-align: left;
+      }
+
+      section.active {
+        display: block;
+      }
+
+      #home {
+        text-align: center;
+        position: relative;
+      }
+
+      ul li a {
+        color: #d81b60;
+        text-decoration: none;
+      }
+
+      ul li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigasi -->
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('about-me')">About Me</a>
+      <a onclick="showSection('contact')">Contact</a>
+      <a onclick="showSection('tugas')">Tugas</a>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="active">
+      <div class="scrolling-message">
+        Selamat datang di website saya, semoga kamu senang di sini!
+      </div>
+      <div class="center-image"></div>
+      <p>
+        Halo semua, saya <strong>Naufa Alya Nafisa</strong>. Saya adalah seorang
+        mahasiswa.
+      </p>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about-me">
+      <p>
+        Saya adalah seseorang mahasiswa Universitas Riau Fakultas Teknik Prodi
+        S1 Teknik Informatika Angkatan 2024.
+      </p>
+      <p>Hobi saya yaitu bermain game 🎮</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <ul>
+        <li>
+          📷 Instagram:
+          <a href="https://instagram.com/upapaw_" target="_blank">@upapaw_</a>
+        </li>
+        <li>
+          📧 Email:
+          <a href="mailto:alyanafisanaufa@gmail.com"
+            >alyanafisanaufa@gmail.com</a
+          >
+        </li>
+        <li>
+          📱 WhatsApp:
+          <a href="https://wa.me/6281261056994" target="_blank"
+            >+62 812-6105-6994</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <!-- TUGAS -->
+    <section id="tugas">
+      <p><strong>Daftar Tugas:</strong></p>
+      <ul>
+        <li>
+          📄 <a href="TUGAS (1).pdf" target="_blank">UJIAN TENGAH SEMESTER</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Script -->
+    <script>
+      function showSection(id) {
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => {
+          section.classList.remove("active");
+        });
+
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
