@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Format Animasi</title>
+    <style>
+      body {
+        background-color: #f8bbd0;
+        padding: 60px 20px 40px;
+        font-family: "Segoe UI", sans-serif;
+        color: #333;
+      }
+
+      h1 {
+        color: #880e4f;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .kembali {
+        display: inline-block;
+        background-color: #f06292;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        background-color: white;
+        border: 2px solid #f06292;
+        border-radius: 12px;
+        padding: 20px 10px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .icon {
+        font-size: 30px;
+        margin-bottom: 10px;
+        color: #f06292;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+        color: #880e4f;
+        margin-bottom: 8px;
+      }
+
+      .preview {
+        font-size: 13px;
+        color: gray;
+      }
+
+      .animasi-container {
+        display: none;
+        margin: 0 auto 40px;
+        max-width: 90%;
+        background-color: white;
+        border: 2px solid #f06292;
+        padding: 15px;
+        border-radius: 12px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        border-radius: 10px;
+      }
+
+      .label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #880e4f;
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div style="text-align: center">
+        <a href="index (3).html" class="kembali">⬅ Kembali ke Halaman Tugas</a>
+      </div>
+
+      <h1>Format Animasi</h1>
+
+      <div class="grid-container">
+        <div class="card" onclick="showAnimasi('nussa')">
+          <div class="icon">🎬</div>
+          <div class="title">Nussa</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('insideout')">
+          <div class="icon">🧠</div>
+          <div class="title">Inside Out 2</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('despicable')">
+          <div class="icon">💛</div>
+          <div class="title">Despicable Me 4</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('jumbo')">
+          <div class="icon">🐘</div>
+          <div class="title">Jumbo</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('upin')">
+          <div class="icon">👦👦</div>
+          <div class="title">Upin & Ipin 16</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('spongebob')">
+          <div class="icon">🍍</div>
+          <div class="title">Spongebob</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('toystory')">
+          <div class="icon">🤠</div>
+          <div class="title">Toy Story 4</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('lionking')">
+          <div class="icon">🦁</div>
+          <div class="title">The Lion King</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('adit')">
+          <div class="icon">🎒</div>
+          <div class="title">Adit Sopo Jarwo</div>
+          <div class="preview">Preview</div>
+        </div>
+        <div class="card" onclick="showAnimasi('turningred')">
+          <div class="icon">🐼</div>
+          <div class="title">Turning Red</div>
+          <div class="preview">Preview</div>
+        </div>
+      </div>
+
+      <!-- Video Section -->
+      <div id="nussa" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/0RH_RarRDNo"
+          allowfullscreen
+        ></iframe>
+        <div class="label">Nussa</div>
+      </div>
+
+      <div id="insideout" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/LEjhY15eCx0"
+          allowfullscreen
+        ></iframe>
+        <div class="label">Inside Out 2</div>
+      </div>
+
+      <div id="despicable" class="animasi-container">
+        <iframe src="https://www.youtube.com/embed/qQlr9-rF32A"></iframe>
+        <div class="label">Despicable Me 4</div>
+      </div>
+
+      <div id="jumbo" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/yMqDgbZmBdk"
+          allowfullscreen
+        ></iframe>
+        <div class="label">Jumbo</div>
+      </div>
+
+      <div id="upin" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/lPJLIYJs-gw"
+          allowfullscreen
+        ></iframe>
+        <div class="label">Upin & Ipin Musim 16</div>
+      </div>
+
+      <div id="spongebob" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/0X1MKmmb3qs"
+          allowfullscreen
+        ></iframe>
+        <div class="label">Spongebob Squarepants</div>
+      </div>
+
+      <div id="toystory" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/wmiIUN-7qhE"
+          allowfullscreen
+        ></iframe>
+        <div class="label">Toy Story 4</div>
+      </div>
+
+      <div id="lionking" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/7TavVZMewpY"
+          allowfullscreen
+        ></iframe>
+        <div class="label">The Lion King</div>
+      </div>
+
+      <div id="adit" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/MQTjPIrVy5E"
+          allowfullscreen
+        ></iframe>
+        <div class="label">Adit Sopo Jarwo The Movie</div>
+      </div>
+
+      <div id="turningred" class="animasi-container">
+        <iframe
+          src="https://www.youtube.com/embed/XdKzUbAiswE"
+          allowfullscreen
+        ></iframe>
+        <div class="label">Turning Red</div>
+      </div>
+    </div>
+
+    <script>
+      function showAnimasi(id) {
+        const allVideos = document.querySelectorAll(".animasi-container");
+        allVideos.forEach((el) => {
+          el.style.display = "none";
+          el.querySelector("iframe").src = el.querySelector("iframe").src; // Reset video
+        });
+
+        const selected = document.getElementById(id);
+        if (selected) {
+          selected.style.display = "block";
+          selected.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Format Video Interaktif</title>
+    <style>
+      body {
+        background-color: #f8bbd0;
+        padding: 100px 20px 40px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        color: #880e4f;
+        margin-bottom: 40px;
+      }
+
+      .format-button {
+        background-color: #f06292;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .video {
+        display: none;
+        margin: 20px auto;
+        max-width: 80%;
+        background-color: white;
+        border: 2px solid #f06292;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .label {
+        font-size: 16px;
+        color: #555;
+        margin-top: 10px;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      a.kembali {
+        display: inline-block;
+        margin-top: 30px;
+        background-color: #f06292;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigasi Kembali -->
+    <div style="text-align: center; margin-top: -60px; margin-bottom: 40px">
+      <a
+        href="index (3).html"
+        style="
+          background-color: #f06292;
+          color: white;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 8px;
+          font-weight: bold;
+          font-size: 16px;
+        "
+      >
+        ⬅ Kembali ke Halaman Tugas
+      </a>
+    </div>
+
+    <h1>Contoh Format Video</h1>
+
+    <!-- Tombol Format -->
+    <div>
+      <button class="format-button" onclick="showVideo('mp4')">MP4</button>
+      <button class="format-button" onclick="showVideo('avi')">AVI</button>
+      <button class="format-button" onclick="showVideo('mkv')">MKV</button>
+      <button class="format-button" onclick="showVideo('mov')">MOV</button>
+      <button class="format-button" onclick="showVideo('wmv')">WMV</button>
+      <button class="format-button" onclick="showVideo('flv')">FLV</button>
+      <button class="format-button" onclick="showVideo('webm')">WEBM</button>
+      <button class="format-button" onclick="showVideo('mpeg')">MPEG</button>
+      <button class="format-button" onclick="showVideo('gp3')">3GP</button>
+      <button class="format-button" onclick="showVideo('avchd')">AVCHD</button>
+    </div>
+
+    <!-- Video Player -->
+    <div id="mp4" class="video">
+      <video controls>
+        <source src="laut.mp4" type="video/mp4" />
+      </video>
+      <div class="label">Format: MP4</div>
+    </div>
+
+    <div id="avi" class="video">
+      <video controls>
+        <source src="laut.avi" type="video/x-msvideo" />
+      </video>
+      <div class="label">Format: AVI</div>
+    </div>
+
+    <div id="mkv" class="video">
+      <video controls>
+        <source src="laut.mkv" type="video/mkv" />
+      </video>
+      <div class="label">Format: MKV</div>
+    </div>
+
+    <div id="mov" class="video">
+      <video controls>
+        <source src="laut.mov" type="video/mov" />
+      </video>
+      <div class="label">Format: MOV</div>
+    </div>
+
+    <div id="wmv" class="video">
+      <video controls>
+        <source src="laut.wmv" type="video/wmv" />
+      </video>
+      <div class="label">Format: WMV</div>
+    </div>
+
+    <div id="flv" class="video">
+      <video controls>
+        <source src="laut.flv" type="video/flv" />
+      </video>
+      <div class="label">Format: FLV</div>
+    </div>
+
+    <div id="webm" class="video">
+      <video controls>
+        <source src="laut.webm" type="video/webm" />
+      </video>
+      <div class="label">Format: WEBM</div>
+    </div>
+
+    <div id="mpeg" class="video">
+      <video controls>
+        <source src="laut.mpeg" type="video/mpeg" />
+      </video>
+      <div class="label">Format: MPEG</div>
+    </div>
+
+    <div id="gp3" class="video">
+      <video controls>
+        <source src="laut.3gp" type="video/3gp" />
+      </video>
+      <div class="label">Format: 3GP</div>
+    </div>
+
+    <div id="avchd" class="video">
+      <video controls>
+        <source src="laut.avchd.mts" type="video/avchd.mts" />
+      </video>
+      <div class="label">Format: AVCHD</div>
+    </div>
+
+    <script>
+      function showVideo(format) {
+        const allVideos = document.querySelectorAll(".video");
+        allVideos.forEach((video) => {
+          video.style.display = "none";
+          video.querySelector("video").pause();
+          video.querySelector("video").currentTime = 0;
+        });
+
+        const selected = document.getElementById(format);
+        if (selected) {
+          selected.style.display = "block";
+          selected.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>

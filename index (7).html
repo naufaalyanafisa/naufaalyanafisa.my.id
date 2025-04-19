@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Format Gambar Interaktif</title>
+    <style>
+      body {
+        background-color: #f8bbd0;
+        padding: 100px 20px 40px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        color: #880e4f;
+        margin-bottom: 40px;
+      }
+
+      .format-button {
+        background-color: #f06292;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .gambar {
+        display: none; /* disembunyikan dulu */
+        margin: 20px auto;
+        max-width: 80%;
+        background-color: white;
+        border: 2px solid #f06292;
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      .label {
+        font-size: 16px;
+        color: #555;
+        margin-top: 10px;
+      }
+
+      img,
+      embed {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigasi Kembali -->
+    <div style="text-align: center; margin-top: -60px; margin-bottom: 40px">
+      <a
+        href="index (3).html"
+        style="
+          background-color: #f06292;
+          color: white;
+          padding: 10px 20px;
+          text-decoration: none;
+          border-radius: 8px;
+          font-weight: bold;
+          font-size: 16px;
+        "
+      >
+        ⬅ Kembali ke Halaman Tugas
+      </a>
+    </div>
+
+    <h1>Format Gambar</h1>
+
+    <!-- Tombol Format -->
+    <div>
+      <button class="format-button" onclick="showImage('jpeg')">JPEG</button>
+      <button class="format-button" onclick="showImage('png')">PNG</button>
+      <button class="format-button" onclick="showImage('gif')">GIF</button>
+      <button class="format-button" onclick="showImage('svg')">SVG</button>
+      <button class="format-button" onclick="showImage('webp')">WEBP</button>
+      <button class="format-button" onclick="showImage('bmp')">BMP</button>
+      <button class="format-button" onclick="showImage('tiff')">TIFF</button>
+      <button class="format-button" onclick="showImage('heic')">HEIC</button>
+      <button class="format-button" onclick="showImage('pdf')">PDF</button>
+      <button class="format-button" onclick="showImage('raw')">RAW</button>
+    </div>
+
+    <!-- Gambar-Gambar -->
+    <div id="jpeg" class="gambar">
+      <img src="miaw.jpeg" alt="JPEG" />
+      <div class="label">Format: JPEG</div>
+    </div>
+
+    <div id="png" class="gambar">
+      <img src="miaw.png" alt="PNG" />
+      <div class="label">Format: PNG</div>
+    </div>
+
+    <div id="gif" class="gambar">
+      <img src="miaw.gif" alt="GIF" />
+      <div class="label">Format: GIF</div>
+    </div>
+
+    <div id="svg" class="gambar">
+      <img src="miaw.svg" alt="SVG" />
+      <div class="label">Format: SVG</div>
+    </div>
+
+    <div id="webp" class="gambar">
+      <img src="miaw.webp" alt="WEBP" />
+      <div class="label">Format: WEBP</div>
+    </div>
+
+    <div id="bmp" class="gambar">
+      <img src="miaw.bmp" alt="BMP" />
+      <div class="label">Format: BMP</div>
+    </div>
+
+    <div id="tiff" class="gambar">
+      <img src="miaw.tiff" alt="TIFF" />
+      <div class="label">Format: TIFF</div>
+      <div class="error-message">
+        Format TIFF tidak dapat ditampilkan di sebagian besar browser.
+      </div>
+    </div>
+
+    <div id="heic" class="gambar">
+      <img src="miaw.heic" alt="HEIC" />
+      <div class="label">Format: HEIC</div>
+      <div class="error-message">
+        Format HEIC tidak didukung di semua browser.
+      </div>
+    </div>
+
+    <div id="pdf" class="gambar">
+      <embed
+        src="miaw.pdf"
+        type="application/pdf"
+        width="100%"
+        height="400px"
+      />
+      <div class="label">Format: PDF</div>
+    </div>
+
+    <div id="raw" class="gambar">
+      <p>[RAW FILE]</p>
+      <div class="label">
+        Format: RAW — Tidak bisa ditampilkan langsung di browser
+      </div>
+    </div>
+
+    <script>
+      function showImage(format) {
+        // Sembunyikan semua dulu
+        const allImages = document.querySelectorAll(".gambar");
+        allImages.forEach((el) => (el.style.display = "none"));
+
+        // Tampilkan elemen yang sesuai
+        const selected = document.getElementById(format);
+        if (selected) {
+          selected.style.display = "block";
+          selected.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+  </body>
+</html>
